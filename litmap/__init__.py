@@ -1,0 +1,1 @@
+"""LitMap MVP package."""

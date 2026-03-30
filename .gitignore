@@ -5,3 +5,8 @@ backend/.venv/
 frontend/node_modules/
 frontend/.next/
 research_workspace.db
+
+# packaging outputs
+packaging/windows/dist/
+packaging/windows/build/
+packaging/windows/dist-installer/

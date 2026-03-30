@@ -56,3 +56,18 @@ docker compose --env-file .env -f docker-compose.prod.yml up -d --build
 ```
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for full production instructions.
+
+## Windows `.exe` installer
+
+A Windows installer pipeline is included under `packaging/windows/`.
+
+On a Windows machine (PowerShell):
+
+```powershell
+cd packaging/windows
+./create_installer.ps1
+```
+
+This produces:
+- `packaging/windows/dist/ResearchWorkspaceLauncher.exe`
+- `packaging/windows/dist-installer/ResearchWorkspaceInstaller.exe`

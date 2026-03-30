@@ -52,7 +52,22 @@ python scripts/apply_migrations.py --status
 - Backend uses `uvicorn` with configurable worker count via `UVICORN_WORKERS`.
 - Frontend uses `next build` and starts with `next start` in production mode.
 
-## 5) Suggested production hardening
+## 5) Windows `.exe` installer build
+
+From Windows PowerShell:
+
+```powershell
+cd packaging/windows
+./create_installer.ps1
+```
+
+Generated artifacts:
+- `packaging/windows/dist/ResearchWorkspaceLauncher.exe`
+- `packaging/windows/dist-installer/ResearchWorkspaceInstaller.exe`
+
+Installer requires Docker Desktop on the target machine.
+
+## 6) Suggested production hardening
 
 - Place both services behind a reverse proxy (e.g., Nginx, Caddy, ALB).
 - Enable TLS and HSTS.

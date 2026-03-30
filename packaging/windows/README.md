@@ -21,13 +21,14 @@ Outputs:
 - `packaging/windows/dist/ResearchWorkspaceLauncher.exe`
 - `packaging/windows/dist-installer/ResearchWorkspaceInstaller.exe`
 
-## What the launcher does
+## Launcher behavior
 
-The installed launcher executes Docker Compose commands against `docker-compose.prod.yml`:
+- Double-clicking the EXE opens a GUI with **Start / Stop / Status / Open Logs** buttons.
+- CLI is also supported:
+  - `ResearchWorkspaceLauncher.exe up`
+  - `ResearchWorkspaceLauncher.exe down`
+  - `ResearchWorkspaceLauncher.exe status`
+  - `ResearchWorkspaceLauncher.exe logs`
+  - `ResearchWorkspaceLauncher.exe gui`
 
-- `ResearchWorkspaceLauncher.exe up` (default if no arg)
-- `ResearchWorkspaceLauncher.exe down`
-- `ResearchWorkspaceLauncher.exe status`
-- `ResearchWorkspaceLauncher.exe logs`
-
-It auto-creates `.env` from `.env.example` on first run.
+The launcher auto-creates `.env` from `.env.example` on first run.

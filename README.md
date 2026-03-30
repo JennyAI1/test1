@@ -71,3 +71,5 @@ cd packaging/windows
 This produces:
 - `packaging/windows/dist/ResearchWorkspaceLauncher.exe`
 - `packaging/windows/dist-installer/ResearchWorkspaceInstaller.exe`
+
+The EXE now opens a desktop GUI launcher by default (Start/Stop/Status/Open Logs).

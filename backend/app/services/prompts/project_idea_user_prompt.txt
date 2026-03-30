@@ -1,0 +1,16 @@
+Given this user context JSON:
+{{CONTEXT_JSON}}
+
+Generate exactly {{COUNT}} future research project ideas.
+For each idea include:
+- title
+- rationale
+- estimated_difficulty (low|medium|high)
+- suggested_next_step
+- evidence.note_ids[]
+- evidence.review_ids[]
+- evidence.reason
+
+Reasoning constraints:
+- Explicitly reference at least one of: gaps, recurring themes, underexplored combinations, or learning goals.
+- Prefer ideas that can be started in < 2 weeks.

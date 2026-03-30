@@ -1,0 +1,9 @@
+ALTER TABLE sources
+  ADD COLUMN IF NOT EXISTS authors VARCHAR(1024) NOT NULL DEFAULT '',
+  ADD COLUMN IF NOT EXISTS summary TEXT NOT NULL DEFAULT '',
+  ADD COLUMN IF NOT EXISTS takeaway TEXT NOT NULL DEFAULT '',
+  ADD COLUMN IF NOT EXISTS metadata_json TEXT NOT NULL DEFAULT '{}';
+
+CREATE INDEX IF NOT EXISTS idx_sources_title ON sources (title);
+
+INSERT INTO schema_migrations(version) VALUES ('005_ingestion_source_fields') ON CONFLICT (version) DO NOTHING;

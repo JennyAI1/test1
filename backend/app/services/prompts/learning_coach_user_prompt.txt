@@ -1,0 +1,9 @@
+Given this user context JSON:
+{{CONTEXT_JSON}}
+
+Return exactly 3 coaching recommendations.
+Each recommendation must include:
+- next_skill
+- recommended_embedded_app
+- weekly_plan (short, realistic)
+- why_it_matters (tie to future research projects)
